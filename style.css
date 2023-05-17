@@ -21,6 +21,7 @@ h1 .temperature {
   margin: 0;
 }
 .searchContainer {
+  display: none;
   padding: 2em;
   position: absolute;
   border-radius: 30px;
