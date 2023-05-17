@@ -173,13 +173,15 @@ button {
   top: 5%;
   left: 2%;
 }
+.searchContainer.show {
+  display: block;
+}
 
+.container.show {
+  display: block;
+}
 /* Media Queries */
 @media (max-width: 768px) {
-  body {
-    background-image: none;
-  }
-
   .searchContainer,
   .search {
     position: static;
