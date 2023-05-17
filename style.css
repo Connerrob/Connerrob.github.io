@@ -189,6 +189,9 @@ button {
     max-width: none;
   }
 
+ .container {
+   display: hidden;
+   
   #userInput {
     font-size: 100%;
   }
