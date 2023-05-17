@@ -106,11 +106,19 @@ window.addEventListener("load", () => {
       this.fetchWeather(document.querySelector("#userInput").value);
     },
   };
+  
+ const searchContainer = document.querySelector('.searchContainer');
+ const container = document.querySelector('.container');
+
   document.querySelector("button").addEventListener("click", function () {
+    searchContainer.classList.add('show');
+    container.classList.add('show');
     weather.search();
   });
   userInput.addEventListener("keydown", function (event) {
     if (event.keyCode === 13) {
+      searchContainer.classList.add('show');
+      container.classList.add('show');
       event.preventDefault();
       weather.search();
     }
