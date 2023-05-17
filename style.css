@@ -190,7 +190,7 @@ button {
   }
 
  .container {
-   display: hidden;
+   display: none;
    
   #userInput {
     font-size: 100%;
