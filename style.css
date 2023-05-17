@@ -181,8 +181,7 @@ button {
   }
 
   .searchContainer,
-  .search,
-  .container {
+  .search {
     position: static;
     margin: 1em;
     width: auto;
