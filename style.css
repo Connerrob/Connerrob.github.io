@@ -20,7 +20,15 @@ body {
 h1 .temperature {
   margin: 0;
 }
-.searchContainer {
+.fontSize {
+  font-weight: bold;
+  font-size: 24px;
+}
+.tempSize {
+  font-size: 30px;
+  font-weight: bold;
+}
+.searchContainer1 {
   display: none;
   padding: 2em;
   position: absolute;
@@ -32,6 +40,45 @@ h1 .temperature {
   margin: 0;
   top: 20%;
   right: 2%;
+}
+.searchContainer2 {
+  display: none;
+  padding: 2em;
+  position: absolute;
+  border-radius: 30px;
+  background-color: rgba(48, 62, 143, 0.9);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 420px;
+  margin: 0;
+  top: 60%;
+  right: 2%;
+}
+.searchContainer3 {
+  display: none;
+  padding: 2em;
+  position: absolute;
+  border-radius: 30px;
+  background-color: rgba(48, 62, 143, 0.9);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 420px;
+  margin: 0;
+  top: 20%;
+  right: 25%;
+}
+.searchContainer4 {
+  display: none;
+  padding: 2em;
+  position: absolute;
+  border-radius: 30px;
+  background-color: rgba(48, 62, 143, 0.9);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 420px;
+  margin: 0;
+  top: 60%;
+  right: 25%;
 }
 .search {
   padding: 2em;
