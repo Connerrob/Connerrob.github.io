@@ -23,6 +23,7 @@ h1 .temperature {
 .fontSize {
   font-weight: bold;
   font-size: 20px;
+  font-family: "Poppins", sans-serif;
 }
 .tempSize {
   font-size: 30px;
@@ -36,7 +37,7 @@ h1 .temperature {
   background-color: rgba(48, 62, 143, 0.9);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   width: 100%;
-  max-width: 420px;
+  max-width: 300px;
   margin: 0;
   top: 20%;
   right: 2%;
@@ -49,7 +50,7 @@ h1 .temperature {
   background-color: rgba(48, 62, 143, 0.9);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   width: 100%;
-  max-width: 420px;
+  max-width: 300px;
   margin: 0;
   top: 60%;
   right: 2%;
@@ -62,10 +63,10 @@ h1 .temperature {
   background-color: rgba(48, 62, 143, 0.9);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   width: 100%;
-  max-width: 420px;
+  max-width: 300px;
   margin: 0;
   top: 20%;
-  right: 25%;
+  right: 20%;
 }
 .searchContainer4 {
   display: none;
@@ -75,10 +76,62 @@ h1 .temperature {
   background-color: rgba(48, 62, 143, 0.9);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   width: 100%;
-  max-width: 420px;
+  max-width: 300px;
   margin: 0;
   top: 60%;
-  right: 25%;
+  right: 20%;
+}
+.searchContainer5 {
+  display: none;
+  padding: 2em;
+  position: absolute;
+  border-radius: 30px;
+  background-color: rgba(48, 62, 143, 0.9);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 300px;
+  margin: 0;
+  top: 20%;
+  right: 38%;
+}
+.searchContainer6 {
+  display: none;
+  padding: 2em;
+  position: absolute;
+  border-radius: 30px;
+  background-color: rgba(48, 62, 143, 0.9);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 300px;
+  margin: 0;
+  top: 60%;
+  right: 38%;
+}
+.searchContainer7 {
+  display: none;
+  padding: 2em;
+  position: absolute;
+  border-radius: 30px;
+  background-color: rgba(48, 62, 143, 0.9);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 300px;
+  margin: 0;
+  top: 20%;
+  right: 56%;
+}
+.searchContainer8 {
+  display: none;
+  padding: 2em;
+  position: absolute;
+  border-radius: 30px;
+  background-color: rgba(48, 62, 143, 0.9);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 300px;
+  margin: 0;
+  top: 60%;
+  right: 56%;
 }
 .search {
   padding: 2em;
@@ -125,7 +178,7 @@ button {
   border-radius: 30px;
   background-color: rgba(48, 62, 143, 0.9);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  max-width: 500px;
+  max-width: 450px;
   width: 100%;
   margin: 0;
   top: 5%;
