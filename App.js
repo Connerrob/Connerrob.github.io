@@ -1,14 +1,20 @@
+// Execute the code when the window has finished loading
 window.addEventListener("load", () => {
   let long;
   let lat;
 
+  // Check if geolocation is supported by the browser
   if (navigator.geolocation) {
+
+    //Get the current position using geolocation
     navigator.geolocation.getCurrentPosition((position) => {
       long = position.coords.longitude;
       lat = position.coords.latitude;
 
+      // Construct the API URL using latitude and longitude
       const api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=0735234e5ecd163762dfa025a9b43679&units=imperial`;
 
+      // Fetch weather data from the API
       fetch(api)
         .then((response) => {
           if (response.ok) {
@@ -17,6 +23,8 @@ window.addEventListener("load", () => {
           throw new Error("Network response was not ok.");
         })
         .then((data) => {
+
+          // Extract relevant weather information from the API response
           const name = data.name;
           const icon = data.weather[0].icon;
           const description = data.weather[0].description;
@@ -32,6 +40,7 @@ window.addEventListener("load", () => {
             minute: "2-digit",
           });
 
+          // Log the weather data to the console
           console.log(
             name,
             icon,
@@ -43,6 +52,7 @@ window.addEventListener("load", () => {
             sunset
           );
 
+          // Update the UI with the user weather information
           document.querySelector(".userCity").innerText = "Weather in " + name;
           document
             .querySelector(".userIcon")
@@ -66,9 +76,11 @@ window.addEventListener("load", () => {
     });
   }
 
+  // Object to manage weather-related functionality
   let weather = {
     savedCities: [],
 
+    // Function to fetch weather data for a given city
     fetchWeather: function (cityName) {
       const api = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=0735234e5ecd163762dfa025a9b43679&units=imperial`;
       return fetch(api)
@@ -80,7 +92,10 @@ window.addEventListener("load", () => {
         });
     },
 
+    // Function to display weather information on the UI
     displayWeather: function (data) {
+
+      // Extract relevant weather information from the API response
       const { name } = data;
       const { icon, description } = data.weather[0];
       const { temp, humidity } = data.main;
@@ -132,11 +147,17 @@ window.addEventListener("load", () => {
     }
   });
 },
+
+    // Function to search for weather information of a city
     search: async function () {
+
+      // Get user input for the city name
       const userInput = document.querySelector("#userInput");
       const cityName = userInput.value;
 
       try {
+
+        // Fetch weather data for the specified city
         const data = await this.fetchWeather(cityName);
 
         // Save the city information in the array
@@ -181,6 +202,7 @@ window.addEventListener("load", () => {
     weather.search();
   });
 
+  // Event listener for the Enter key in the input field
   userInput.addEventListener("keydown", function (event) {
     if (event.keyCode === 13) {
       event.preventDefault();
