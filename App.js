@@ -94,33 +94,44 @@ window.addEventListener("load", () => {
         minute: "2-digit",
       });
 
-      // Display current weather information
-      document.querySelector(".cityName").innerText = "Weather in " + name;
-      document.querySelector(".icon").setAttribute("src", `http://openweathermap.org/img/wn/${icon}.png`);
-      document.querySelector(".description").innerText = description;
-      document.querySelector(".temperature").innerText = temp + "°F";
-      document.querySelector(".humidity").innerText = "Humidity: " + humidity + "%";
-      document.querySelector(".windSpeed").innerText = "Wind Speed: " + speed + " MPH";
-      document.querySelector(".sunRise").innerText = "Sunrise: " + sunrise;
-      document.querySelector(".sunSet").innerText = "Sunset: " + sunset;
-      document.body.style.backgroundImage = "url('https://source.unsplash.com/1920x1000/?" + name + "')";
+       // Display current weather information
+  const cityNameElement = document.querySelector(".cityName");
+  const iconElement = document.querySelector(".icon");
+  const descriptionElement = document.querySelector(".description");
+  const temperatureElement = document.querySelector(".temperature");
+  const humidityElement = document.querySelector(".humidity");
+  const windSpeedElement = document.querySelector(".windSpeed");
+  const sunRiseElement = document.querySelector(".sunRise");
+  const sunSetElement = document.querySelector(".sunSet");
 
-      // Display saved city information
-      this.savedCities.forEach((savedCity, index) => {
-        const savedCityElement = document.querySelector(`.searchContainer${index + 1}`);
-        savedCityElement.innerHTML = `
-          <h2 class = "fontSize">${savedCity.name}</h2>
-          <div class = "tempSize">${savedCity.temp}°F</div>
-          <img src="http://openweathermap.org/img/wn/${savedCity.icon}.png" alt="${savedCity.description}" />
-          <div class = "fontSize">${savedCity.description}</div>
-          <div class = "fontSize">Humidity: ${savedCity.humidity}%</div>
-          <div class = "fontSize">Wind Speed: ${savedCity.speed} MPH</div>
-          <div class = "fontSize">Sunrise: ${savedCity.sunrise}</div>
-          <div class = "fontSize">Sunset: ${savedCity.sunset}</div>
-        `;
-      });
-    },
+  if (cityNameElement && iconElement && descriptionElement && temperatureElement && humidityElement && windSpeedElement && sunRiseElement && sunSetElement) {
+    cityNameElement.innerText = "Weather in " + name;
+    iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${icon}.png`);
+    descriptionElement.innerText = description;
+    temperatureElement.innerText = temp + "°F";
+    humidityElement.innerText = "Humidity: " + humidity + "%";
+    windSpeedElement.innerText = "Wind Speed: " + speed + " MPH";
+    sunRiseElement.innerText = "Sunrise: " + sunrise;
+    sunSetElement.innerText = "Sunset: " + sunset;
+  }
 
+  // Display saved city information
+  this.savedCities.forEach((savedCity, index) => {
+    const savedCityElement = document.querySelector(`.searchContainer${index + 1}`);
+    if (savedCityElement) {
+      savedCityElement.innerHTML = `
+        <h2 class="fontSize">${savedCity.name}</h2>
+        <div class="tempSize">${savedCity.temp}°F</div>
+        <img src="http://openweathermap.org/img/wn/${savedCity.icon}.png" alt="${savedCity.description}" />
+        <div class="fontSize">${savedCity.description}</div>
+        <div class="fontSize">Humidity: ${savedCity.humidity}%</div>
+        <div class="fontSize">Wind Speed: ${savedCity.speed} MPH</div>
+        <div class="fontSize">Sunrise: ${savedCity.sunrise}</div>
+        <div class="fontSize">Sunset: ${savedCity.sunset}</div>
+      `;
+    }
+  });
+},
     search: async function () {
       const userInput = document.querySelector("#userInput");
       const cityName = userInput.value;
