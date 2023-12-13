@@ -191,20 +191,87 @@ button {
 .container.show {
   display: block;
 }
-
 @media (max-width: 768px) {
-  .searchContainer,
+  .searchContainer1,
+  .searchContainer2,
+  .searchContainer3,
+  .searchContainer4,
+  .searchContainer5,
+  .searchContainer6,
+  .searchContainer7,
+  .searchContainer8,
   .search {
+  position: static;
+  margin: 1em;
+  width: auto;
+  max-width: none;
+  }
+  
+  /* Hide the container on smaller screens */
+  .container {
+  display: none;
+  }
+  
+  /* Adjust font size for user input */
+  #userInput {
+  font-size: 100%;
+  }
+  }
+  
+  /* Styles for common search and input elements */
+  .search,
+  .searchContainer1 {
     position: static;
     margin: 1em;
     width: auto;
     max-width: none;
   }
-
-  .container {
-    display: none;
-  }
+  
+  /* Input styles */
   #userInput {
-    font-size: 100%;
+  border: none;
+  outline: none;
+  padding: 0.5em 1em;
+  border-radius: 24px;
+  background-color: #7c7c7c2b;
+  color: white;
+  font-family: inherit;
+  font-size: 120%;
   }
-}
+  
+  /* Focus styles for input */
+  #userInput:focus {
+  border-color: 1px solid white;
+  }
+  
+  /* Button styles */
+  button {
+  margin: 0.5em;
+  border-radius: 50%;
+  border: none;
+  height: 46px;
+  width: 46px;
+  outline: none;
+  background-color: #7c7c7c2b;
+  color: white;
+  }
+  
+  /* Container styles */
+  .container {
+  padding: 2em;
+  position: absolute;
+  border-radius: 30px;
+  background-color: rgba(48, 62, 143, 0.9);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  max-width: 450px;
+  width: 100%;
+  margin: 0;
+  top: 5%;
+  left: 2%;
+  }
+  
+  /* Show class for search and container */
+  .searchContainer.show,
+  .container.show {
+  display: block;
+  }
