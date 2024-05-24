@@ -3,7 +3,7 @@ window.addEventListener("load", () => {
   let long;
   let lat;
 
-  // Check if geolocation is supported by the browser
+  // Check if geolocation is supported
   if (navigator.geolocation) {
 
     //Get the current position using geolocation
@@ -11,10 +11,10 @@ window.addEventListener("load", () => {
       long = position.coords.longitude;
       lat = position.coords.latitude;
 
-      // Construct the API URL using latitude and longitude
+      // API URL using latitude and longitude
       const api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=0735234e5ecd163762dfa025a9b43679&units=imperial`;
 
-      // Fetch weather data from the API
+      // Fetch weather data
       fetch(api)
         .then((response) => {
           if (response.ok) {
@@ -24,7 +24,7 @@ window.addEventListener("load", () => {
         })
         .then((data) => {
 
-          // Extract relevant weather information from the API response
+          // Extract relevant weather information
           const name = data.name;
           const icon = data.weather[0].icon;
           const description = data.weather[0].description;
@@ -95,7 +95,7 @@ window.addEventListener("load", () => {
     // Function to display weather information on the UI
     displayWeather: function (data) {
 
-      // Extract relevant weather information from the API response
+      // Extract relevant weather information from the API
       const { name } = data;
       const { icon, description } = data.weather[0];
       const { temp, humidity } = data.main;
