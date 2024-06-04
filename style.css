@@ -15,7 +15,7 @@ body {
   align-items: center;
   font-family: "Poppins", sans-serif;
   color: white;
-  background-image: url("https://source.unsplash.com/1920x1000/?landscape");
+  background-image: url("https://source.unsplash.com/2048x1080/?landscape");
 }
 h1 .temperature {
   margin: 0;
