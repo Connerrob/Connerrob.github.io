@@ -16,6 +16,7 @@ body {
   font-family: "Poppins", sans-serif;
   color: white;
   background-image: url("https://source.unsplash.com/1920x1000/?landscape");
+  width: auto;
 }
 h1 .temperature {
   margin: 0;
