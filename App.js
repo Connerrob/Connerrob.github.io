@@ -147,8 +147,6 @@ window.addEventListener("load", () => {
     }
   });
 },
-
-    // Function to search for weather information of a city
     search: async function () {
 
       // Get user input for the city name

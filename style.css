@@ -15,8 +15,9 @@ body {
   align-items: center;
   font-family: "Poppins", sans-serif;
   color: white;
-  background-image: url("https://source.unsplash.com/1920x1000/?landscape");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
 }
 h1 .temperature {
   margin: 0;
@@ -195,18 +196,21 @@ button {
 
 @media (max-width: 768px) {
   .searchContainer1,
+  .search {
+  position: static;
+  margin: 1em;
+  width: auto;
+  max-width: none;
+  }
+  
   .searchContainer2,
   .searchContainer3,
   .searchContainer4,
   .searchContainer5,
   .searchContainer6,
   .searchContainer7,
-  .searchContainer8,
-  .search {
-  position: static;
-  margin: 1em;
-  width: auto;
-  max-width: none;
+  .searchContainer8 {
+    display: none;
   }
   
   /* Hide the container on smaller screens */
